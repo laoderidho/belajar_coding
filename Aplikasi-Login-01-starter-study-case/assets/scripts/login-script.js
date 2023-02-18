@@ -15,15 +15,15 @@ const expectedPassword = 'superpassword';
 loginFormElement.addEventListener('submit', function(event) {
     event.preventDefault();
     // TODO 1 : Mendapatkan input email dan password pengguna dari form.
-      const input_Email = document.getElementById("inputEmail").value
-      const input_pass = document.getElementById("inputPassword").value
+      const email = inputEmailElement.value
+      const pass = inputPasswordElement.value
     /* TODO 2 : Buat Logika perbandingan dengan kondisi:
        Jika variabel email identik dengan expectedEmail dan password identik dengan expectedPassword, panggil fungsi goToHome().
        Jika tidak, maka panggil fungsi showPopUp().
      */
-    if(input_Email == expectedEmail && input_pass == expectedPassword){
-        goToHome();
-    }else{
-        showPopUp();
+    if (email == expectedEmail && pass == expectedPassword) {
+      goToHome();
+    } else {
+      showPopUp();
     }
 });
