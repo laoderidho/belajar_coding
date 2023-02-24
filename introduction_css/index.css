@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
+
+*{
+    box-sizing: border-box;
+}
 
 body{
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 h2{
     color: #002ac6;
 }
@@ -15,6 +23,80 @@ footer{
     text-align: center;
     margin-top: 30px;
     padding: 20px;
+    width: 100%;
+    overflow: auto;
     background-color: #00a2c6;
     color: white;
+}
+
+.featured-image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile{
+    width: 200px;
+    margin: 0 auto ;
+}
+
+article{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 4px;
+    width: auto;
+    overflow: auto;
+}
+
+.jumbotron{
+    text-align: center;
+    background-color:#00c8eb;
+    color: white;
+    padding: 60px;
+}
+
+nav{
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav li{
+    display: inline;
+    margin-right: 20px;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    padding: 20px;
+    overflow: auto;
+    width: 75%;
+    float: left;
+}
+
+aside{
+    float: right;
+    width: 25%;
+    margin-top: 30px;
+    padding-left: 19px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1000px){
+
+    main{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+}
+
+header{
+    display: inline;
 }

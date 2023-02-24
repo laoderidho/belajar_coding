@@ -10,23 +10,24 @@
 <body>
     <!-- penulisan heading ini sama seperti judul contohnya -->
     <header>
-        <h1>Tentang Bandung</h1>
-    
-        <img src="https://media1.giphy.com/media/39ChvhzsCottAC9xIl/giphy.gif?cid=ecf05e47en15kxq7rbk0i03phi96o3f7f0tn3rhvxp9nf3xk&rid=giphy.gif&ct=g" alt="gif dilan" width="200px">
-        <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
-    
-        <ul>
-            <li><a href="#sejarah">Sejarah</a></li>
-            <li><a href="#geografis">Geografis</a></li>
-            <li><a href="#Wisata">Wisata</a></li>
-        </ul>
+        <div class="jumbotron">
+            <h1>Tentang Bandung</h1>
+            <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#geografis">Geografis</a></li>
+                <li><a href="#Wisata">Wisata</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <article>
 
             <h2 id="sejarah">Sejarah Bandung</h2>
-            <img src="../pendalaman_html/image/history.jpg" alt="foto sejarah">
+            <img src="../pendalaman_html/image/history.jpg" class="featured-image" alt="foto sejarah">
        
                 <p>Sekitar akhir tahun 1808/awal tahun 1809, Bupati beserta sejumlah rakyatnya pindah dari Krapyak mendekati lahan bakal
                 ibukota baru. Mula-mula Bupati tinggal di Cikalintu (daerah Cipaganti), kemudian pindah ke Balubur Hilir, selanjutnya
@@ -41,7 +42,7 @@
         
         <article>
             <h2 id="geografis">Geografis Bandung</h2>
-            <img src="../pendalaman_html/image/geografis.jpg" alt="Geografis Bandung">
+            <img src="../pendalaman_html/image/geografis.jpg" class="featured-image" alt="Geografis Bandung">
                 <p>Letak Kabupaten Bandung secara administratif di dalam Provinsi Jawa Barat terletak diantara Kota Bandung, Kabupaten
                 Bandung
                 Barat, Kabupaten Cianjur, Kabupaten Sumedang dan Kabupaten Garut. Peta orientasi wilayah Kabupaten Bandung secara lebih
@@ -61,28 +62,29 @@
         <h2 id="Wisata">Wisata</h2>
         <section>
             <h3>farm house lembang</h3>
-            <img src="../pendalaman_html/image/farm-house.jpg" alt="farm house">
+            <img src="../pendalaman_html/image/farm-house.jpg"  class="featured-image" alt="farm house">
         </section>
         
         <section>
             <h3>Observatorium Bosscha</h3>
-            <img src="../pendalaman_html/image/bosscha.jpg" alt="bpsschaa">
+            <img src="../pendalaman_html/image/bosscha.jpg" class="featured-image" alt="bpsschaa">
         </section>
         
                 <p>Kota Bandung telah menjadi tujuan utama dalam menikmati liburan akhir pekan terutama dari masyarakat yang berasal
-                dari Jakarta sekitarnya</p>
-    </article>
+                dari Jakarta sekitarnya Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam expedita itaque a? Ullam, pariatur debitis unde ipsum eveniet saepe minima voluptas molestiae sint porro, sed ratione distinctio, asperiores voluptatem culpa.</p>
+        </article>
         
+    </main>
+
     <aside>
-        <article>
             <header>
                 <h2>Kota Bandung</h2>
                 <p>Kota Kembang Paris van Java</p>
             </header>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lambang_Kota_Bandung.svg" width="300px">
+                <img class="profile" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lambang_Kota_Bandung.svg" width="300px">
             </figure>
-        </article>
+        
 
         <section>
             <table>
@@ -109,7 +111,6 @@
             </table>
         </section>
     </aside>
-    </main>
 
     <footer>
        author  &copy; 2023, La Ode Ridho Fahreza
