@@ -1,12 +1,17 @@
+div{
+    border: 5px solid black;
+    width: 30%;
+    margin: auto;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    margin: auto;
-    border: 5px solid black;
     padding: 30px;
 }
-
+form input{
+    margin: 5px ;
+}
 #getTampil{
    cursor: pointer;
 }

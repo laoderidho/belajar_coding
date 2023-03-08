@@ -11,3 +11,13 @@ const getPass = ()=>{
 
 const getPassTrigerd = document.getElementById('getTampil')
 .addEventListener('click', getPass)
+
+const getForm = document.getElementById('getForm')
+.addEventListener('submit', (event)=>{
+  const getName = document.getElementById('name').value
+  const getPassword = document.getElementById('pass').value
+  const getOuput = `hello ${getName} your password is ${getPassword}`
+  document.getElementById("tesDiv").innerHTML = getOuput;
+  event.preventDefault();
+})
+

@@ -8,13 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <label for="name">Masukkan Nama Anda</label>
-        <input type="text">
-        <label for="sandi">Masukkan Sandi Anda </label> 
-        <input id="pass" type="password">
-        <span id="getTampil">Tampil</span>
-    </form>
+    <div>
+        <form action="" id="getForm">
+            <label for="name">Nama</label>
+            <input type="text" placeholder="masukkan Nama Anda" id="name" required>
+            <label for="sandi" >Sandi</label> 
+            <input id="pass" type="password" placeholder="Masukkan Sandi Anda"  required>
+            <span id="getTampil">Tampil</span>
+            <input type="submit">
+        </form>
+        <h1 id="tesDiv"></h1>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
