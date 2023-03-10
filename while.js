@@ -1,9 +1,5 @@
-let data = 0;
-const datamax = 12;
-
-
-while(data<=datamax){
-    console.log('ini adalah perulangan ke' + data)
-    data+= 3
+function alert(string) {
+  console.log(string);
 }
-console.log(data)
+
+alert("Dicoding Indonesia");
