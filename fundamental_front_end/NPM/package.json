@@ -1,0 +1,20 @@
+{
+  "name": "npm_learn",
+  "version": "1.0.0",
+  "description": "\"this my NPM learning\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "author": "La Ode Ridho Fahreza",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
