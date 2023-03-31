@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-image: url('../image/netflix.jpg');
+}
+
+main{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+main .title span{
+    color: red;
+}
+
+main > article{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main > article > section{
+    position: relative;
+    margin: 10px;
+    width: 230px;
+}
+
+main > article > section > img{
+    width: 200px;
+    border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+main > article > section:hover > img{ 
+    filter: blur(3px);
+}
+
+main > article > section > p.title{
+    transition: .5s;
+    text-align: center;
+}
+
+main>article>section:hover > p.title{
+    color: red;
+}
+
+main > article > section > p.year {
+    font-size: 11px;
+    color:#FFFFFF80;
+}
+
+main > article > section > p.rating{
+    position: absolute;
+    top: 0;
+    background-color: #FFFFFF80;
+    opacity: 0;
+    padding: 2px;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+main > article > section:hover p.rating{
+    opacity: 1;
+}
+
+main > form{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 15px 50px 0;
+}
+ 
+main > form > input[type= text]{
+    background-color: rgb(37, 35, 35);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 13px;
+}
+
+main > form > button[type= submit]{
+    width: 50px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+main > form > button[type = submit]:hover{
+    background-color: #b71c1c; 
+}
+
+footer{
+    background-color: black;
+    opacity: .9;
+    height: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+}
+
+@media  only screen and (max-width: 745px) {
+    .item > h1{
+        font-size: 35px;
+    }
+    .item> h2{
+        text-align: left;
+    }
+    .item>a{
+        margin-left: 60px;
+    }
+
+    main > article > section{
+        width: 100px;
+    }
+    main > article > section > img{
+        width: 100px;
+    }
+}
+
