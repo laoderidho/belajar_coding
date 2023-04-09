@@ -81,6 +81,10 @@ body {
   color: #000;
 }
 
+nav h1{
+  display: none;
+}
+
 
 /*
  * Jumbotron
@@ -191,6 +195,7 @@ main {
 
 .latest {
   width: 100%;
+  display: grid;
   margin: 60px auto;
   text-align: center;
 }
@@ -212,6 +217,9 @@ main {
  */
 
 .posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 15px ;
   margin: 32px auto auto;
   text-align: left;
 }
@@ -296,4 +304,52 @@ footer a {
   padding: 1.3em;
   text-decoration: none;
   color: #fff
+}
+
+@media screen and (max-width: 950px){
+  .posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 15px;
+      margin: 32px auto auto;
+      text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px){
+  .posts {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 15px;
+      margin: 32px auto auto;
+      text-align: left;
+    }
+
+    nav ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      z-index: 999;
+      background-color: white;
+      opacity: .8;
+      transition: all .5s;
+      width: 100%;
+      display: none;
+    }
+
+    nav ul.nav__list{
+      display: flex;
+    }
+
+    nav h1{
+      display: block;
+      font-size: 40px;
+      margin: 10px;
+    }
+
+    nav ul li a{
+      color: black !important;
+      font-weight: bold;
+    }
 }

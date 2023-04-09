@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tesGrid{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: animasiKotak .5s infinite;
+}
+
+@keyframes animasiKotak{
+    from{
+        width: 200px;
+        height: 200px;
+        margin-left: 300px ;
+        opacity: 0;
+    }to{
+        
+    }
+}
+
+
+
+

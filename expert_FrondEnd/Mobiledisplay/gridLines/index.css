@@ -1,0 +1,35 @@
+.parentBox{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* mengatur margin dalam box */
+    gap: 10px;
+}
+
+.box{
+   border: 1px dashed black;
+}
+
+.box-green{background-color: green;}
+.box-red{
+    background-color: red;
+    /* kotak akan berada dari baris 1 dan berakhir ke baris 2 3 dari sini artinya kotak akan berhenti jika ada kotak baris ke 3 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.box-black{
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.box-purple{background-color: purple;}
+.box-yellow{background-color: yellow;}
+.box-blue{
+    background-color: blue;
+    grid-column-start: 3;
+
+    /* ini sistemnya sama, bedanya ini menggunakan kolom */
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
