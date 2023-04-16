@@ -70,7 +70,7 @@ header > nav {
   position: relative;
   min-width: 44px;
   min-height: 44px;
-  padding: 13px;
+  padding: 14px;
 }
 
 .nav-item ul li a::before {
@@ -96,6 +96,10 @@ header > nav {
   display: none;
 }
 
+#hamburger-menu:focus{
+  border: 1px solid white;
+}
+
 .nav-item ul li:hover a::before {
   transform: scaleX(1);
   transform-origin: right;
@@ -109,6 +113,7 @@ main {
 
 .jumbotron {
   background-image: url(../public/images/heros/hero-image_2.jpg);
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

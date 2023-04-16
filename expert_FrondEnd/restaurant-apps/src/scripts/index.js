@@ -44,7 +44,7 @@ const Restourant = async () => {
     const response = await fetch('https://restaurant-api.dicoding.dev/list')
     .then(response => response.json())
     .then(responseJson =>responseJson.restaurants)
-
+    .catch(error => console.log(error))
     return response
 }
 
@@ -62,7 +62,7 @@ const getDetailResto = async (id) => {
   const detail = await detailResto(id);
   const modal = document.querySelector(".modal-content");
   modal.innerHTML = ` 
-        <img src="https://restaurant-api.dicoding.dev/images/medium/${detail.pictureId}" alt="">
+        <img src="https://restaurant-api.dicoding.dev/images/medium/${detail.pictureId}" alt=" gambar dari ${detail.name}">
                 <div class="modal-item">
                     <h1 tabindex="0">${detail.name}</h1>
                     <br><br>
@@ -70,7 +70,7 @@ const getDetailResto = async (id) => {
                     <br><br>
                     <h4>Description:</h4>
                     <br>
-                    <p >${detail.description}</p>
+                    <p>${detail.description}</p>
                     <button aria-label="close" class="close-modal"><i class="fas fa-close"></i></button>
         </div>
     `;
@@ -85,12 +85,12 @@ const dataResto = async () => {
     data.map((resto) => {
       listResto.innerHTML += `
           <section class="card-content">
-                    <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" alt="">
+                    <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" alt="gambar dari ${resto.name}">
                     <h1 class="location"> <i class="fas fa-location-dot"></i> ${resto.city}</h1>
                     <div class="card-item">
                         <h3><i class="fas fa-star"></i><span>${resto.rating}</span></h3>
                         <h1>${resto.name}</h1>
-                        <button tabindex="2" aria-label="${resto.name} rating is ${resto.rating} and restourant Description is ${resto.description}" class="detail" data-id="${resto.id}">Detail</button>
+                        <button aria-label="${resto.name},  rating is ${resto.rating}, and restourant Description is ${resto.description}" class="detail" data-id="${resto.id}">Detail</button>
                     </div>
             </section>`;
     
