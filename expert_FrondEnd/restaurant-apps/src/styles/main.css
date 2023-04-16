@@ -2,8 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#skip_content{
+  position: absolute;
+  top: -50px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  z-index: 100;
+  text-decoration: none;
+}
+
+
+#skip_content:focus{
+  top: 0;
 }
 
 body {
@@ -19,7 +34,6 @@ header > nav {
   color: white;
   position: fixed;
   z-index: 1;
-  background-color: transparent;
   transition: all 0.5s ease-in-out;
 }
 
@@ -51,19 +65,21 @@ header > nav {
 .nav-item ul li a {
   text-decoration: none;
   color: white;
-  font-size: 15px;
   list-style: none;
   font-weight: bold;
   position: relative;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 13px;
 }
 
 .nav-item ul li a::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 75%;
   height: 2px;
   background-color: #19a7ce;
-  bottom: 0;
+  bottom: 10px;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in;
@@ -79,6 +95,7 @@ header > nav {
 #hamburger-menu {
   display: none;
 }
+
 .nav-item ul li:hover a::before {
   transform: scaleX(1);
   transform-origin: right;
@@ -160,7 +177,7 @@ main > h1 {
 
 .card-content {
   width: 95%;
-  height: 350px;
+  height: 370px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 10px;
   position: relative;
@@ -178,6 +195,13 @@ main > h1 {
   text-align: center;
 }
 
+.card-item > h3 span{
+  color: #19a7ce;
+}
+
+.card-item > h3 {
+ color: #424242; 
+}
 .location {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -193,11 +217,14 @@ main > h1 {
   background-color: #19a7ce;
   border: none;
   color: white;
-  padding: 12px;
   border-radius: 4px;
-  margin-left: 8px;
   cursor: pointer;
+  margin: 8px ;
+  font-size: 19px;
+  padding: 12px;
   transition: all 0.3s ease-in-out;
+  min-width: 50px;
+  min-height: 44px;
 }
 
 .detail:hover {
@@ -262,6 +289,17 @@ main > h1 {
   background-color: #146c94;
 }
 
+footer{
+  background-color: #19a7ce;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* tablet display */
 @media screen and (max-width: 1000px) {
   .card {
@@ -296,6 +334,7 @@ main > h1 {
     justify-content: space-between;
   }
 
+
   .nav-item ul.hamburger-toogle {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
@@ -313,19 +352,32 @@ main > h1 {
   }
   #hamburger-menu {
     display: flex;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .jumbotron-title {
-    font-size: 50px;
+    font-size: 40px;
   }
   .jumbotron-subtitle {
-    font-size: 25px;
+    font-size: 18px;
   }
 
+  .detail{
+    font-size: 16px;
+  }
   .card {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .card-item > h1{
+    font-size: 25px;
+  }
+
+  .card-content > .location{
+    font-size: 19px;
+  }
+
   .modal-content {
     width: 90%;
     height: 85%;
@@ -342,4 +394,14 @@ main > h1 {
   .modal-item {
     width: 100%;
   }
+
+  .modal-item p{
+    letter-spacing: .5px;
+  }
+
+  .close-modal {
+    padding: 5px;
+    font-size: 30px;
+  }
+  
 }

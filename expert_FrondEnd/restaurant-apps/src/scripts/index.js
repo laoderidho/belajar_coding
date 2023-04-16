@@ -70,7 +70,7 @@ const getDetailResto = async (id) => {
                     <br><br>
                     <h4>Description:</h4>
                     <br>
-                    <p tabindex="0" >${detail.description}</p>
+                    <p >${detail.description}</p>
                     <button aria-label="close" class="close-modal"><i class="fas fa-close"></i></button>
         </div>
     `;
@@ -88,9 +88,9 @@ const dataResto = async () => {
                     <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" alt="">
                     <h1 class="location"> <i class="fas fa-location-dot"></i> ${resto.city}</h1>
                     <div class="card-item">
-                        <h3><i class="fas fa-star"></i>${resto.rating}</h3>
+                        <h3><i class="fas fa-star"></i><span>${resto.rating}</span></h3>
                         <h1>${resto.name}</h1>
-                        <button aria-label="${resto.name} rating is ${resto.rating} and restourant Description is ${resto.description}" class="detail" data-id="${resto.id}">Detail</button>
+                        <button tabindex="2" aria-label="${resto.name} rating is ${resto.rating} and restourant Description is ${resto.description}" class="detail" data-id="${resto.id}">Detail</button>
                     </div>
             </section>`;
     
