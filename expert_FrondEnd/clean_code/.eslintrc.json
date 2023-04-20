@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "google",
+    "plugins": ["jsdoc"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "jsdoc/check-param-names": "error"
+    }
+}
