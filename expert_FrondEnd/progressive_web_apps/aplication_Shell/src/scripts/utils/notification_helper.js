@@ -1,20 +1,17 @@
+/* eslint-disable no-useless-return */
 const NotificationHelper = {
-
-   sendNotification ({ title, options }) {
+  sendNotification ({ title, options }) {
     if (!this._checkAvailability()) {
       console.log('Notification not supported in this browser')
       return
     }
-
     if (!this._checkPermission()) {
       console.log('User did not yet granted permission')
       this._requestPermission()
       return
     }
-
-    return this._showNotification({ title, options })
+    this._showNotification({ title, options })
   },
-
   _checkAvailability () {
     return 'Notification' in window
   },
@@ -29,7 +26,6 @@ const NotificationHelper = {
     if (status === 'denied') {
       console.log('Notification Denied')
     }
-
     if (status === 'default') {
       console.log('Permission closed')
     }
@@ -38,7 +34,6 @@ const NotificationHelper = {
   async _showNotification ({ title, options }) {
     const serviceWorkerRegistration = await navigator.serviceWorker.ready
     serviceWorkerRegistration.showNotification(title, options)
-    console.log(serviceWorkerRegistration)
   }
 }
 
