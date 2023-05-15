@@ -76,30 +76,14 @@
     font-size: 19px;
   }
 
-  .modal-content {
-    width: 90%;
-    height: 85%;
-    flex-direction: column;
-    justify-content: flex-start;
+  .detail_content {
+        flex-direction: column;
+    }
+  .detail_content > img {
+      width: 100%;
+      height: 50vh;
   }
-
-  .modal-content > img {
-    height: 30%;
-    width: 100%;
-    border-radius: 3px;
+  .detail_item {
+      width: 100%;
   }
-
-  .modal-item {
-    width: 100%;
-  }
-
-  .modal-item p{
-    letter-spacing: .5px;
-  }
-
-  .close-modal {
-    padding: 5px;
-    font-size: 30px;
-  }
-  
 }

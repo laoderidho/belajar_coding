@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.png">
+    <link rel="manifest" href="./app.webmanifest">
     <title>Starter Project Katalog Restaurant</title>
 </head>
 <body>
-    <a tabindex="0" aria-label="Skip Ke Konten Katalog Restoran" id="skip_content"  href="#favorite">Skip Ke Konten</a>
+    <a tabindex="0" aria-label="Skip Ke Konten Katalog Restoran" id="skip_content"  href="#content">Skip Ke Konten</a>
     <header>
         <!-- navbar -->
         <nav>
@@ -17,9 +19,9 @@
             </div>
             <div class="nav-item ">
                 <ul class="" id="tab_navigation">
-                    <li><a href="#" id="home" class="active">Home</a></li>
-                    <li><a href="#favorite" id="myFavorite">Favorite</a></li>
-                    <li><a  target="_blank" href="https://github.com/laoderidho">About Us</a></li>
+                    <li><a href="#/home" id="home" class="active">Home</a></li>
+                    <li><a href="#/favorite">Favorite</a></li>
+                    <li><a target="_blank"  href="https://github.com/laoderidho">About Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,15 +35,7 @@
         </section>
     </header>
      
-    <main id="favorite">
-        <h1 >Explore Restaurant</h1>
-        <div class="card"></div>;
-        <div id="modal">
-            <section class="modal-content">
-                
-            </section>
-        </div>
-    </main>
+    <main tabindex="0" id="content"></main>
 
 
     <footer>

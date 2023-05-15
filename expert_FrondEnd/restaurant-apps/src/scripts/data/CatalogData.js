@@ -9,7 +9,8 @@ class CatalogData {
 
   static async GetDetail(id) {
     const response = await fetch(`${ConfigDataApi.basic_link + ConfigDataApi.GetDetail}/${id}`);
-    return response.json();
+    const resJson = await response.json();
+    return resJson.restaurant;
   }
 }
 
