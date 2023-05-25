@@ -1,7 +1,5 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// utils import
 import Drawer from './views/app';
 import setActiveNavbar from './utils/activeNavbar';
 import hiddenHeader from './utils/hidden_navbar';

@@ -10,7 +10,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "ignorePatterns": ["webpack.common.js", "webpack.dev.js", "webpack.prod.js", "specs/", "e2e/", "codecept.conf.js", "node_modules/"],
+    "ignorePatterns": ["webpack.common.js", "webpack.dev.js", "webpack.prod.js", "specs/", "e2e/", "codecept.conf.js", "node_modules/", "karma.conf.js"],
     "rules": {
         "arrow-parens": ["error", "as-needed"],
         "no-console": "off",

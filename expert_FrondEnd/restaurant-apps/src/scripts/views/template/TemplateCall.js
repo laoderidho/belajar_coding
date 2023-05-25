@@ -53,7 +53,11 @@ const createDetailTemplate = detail => `
                     ${detail.customerReviews.map(review => `
                     <div class="comment-parent">
                           <div class="coment-item-header">
-                              <img src="./images/heros/profile.jpg" alt="">
+                            <picture>
+                                <source media="(max-width: 600px") srcset="/images/profile-small.jpg">
+                                <img src="/images/profile-large.jpg" alt="profile ${review.name}">
+                            </picture>
+                              <img src="./images/profile.jpg" alt="">
                               <h3>${review.name}</h3>
                               <p>${review.date}</p>
                           </div>
