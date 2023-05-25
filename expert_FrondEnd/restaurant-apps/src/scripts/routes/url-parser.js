@@ -1,9 +1,9 @@
 const Url = {
   parseActiveWithCombiner() {
     const getUrl = window.location.hash.slice(1).toLowerCase();
-    const splite = this._urlSplitter(getUrl);
+    const split = this._urlSplitter(getUrl);
 
-    return this._urlCombiner(splite);
+    return this._urlCombiner(split);
   },
 
   parseActiveWithoutCombiner() {
@@ -20,10 +20,12 @@ const Url = {
     };
   },
 
-  _urlCombiner(spliteUrl) {
-    return (spliteUrl.resource ? `/${spliteUrl.resource}` : '/')
-        + (spliteUrl.id ? '/:id' : '')
-        + (spliteUrl.verb ? `/${spliteUrl.verb}` : '');
+  _urlCombiner(splitUrl) {
+    return (
+      (splitUrl.resource ? `/${splitUrl.resource}` : '/')
+      + (splitUrl.id ? '/:id' : '')
+      + (splitUrl.verb ? `/${splitUrl.verb}` : '')
+    );
   },
 };
 

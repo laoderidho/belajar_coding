@@ -5,15 +5,19 @@ const Favorite = {
   async render() {
     return `
          <main id="favorite" class="favorite">
-            <h2>Favorite Page</h2>
+            <h1 class="title">Favorite Page</h1>
+            <loading-component></loading-component>
             <div class="card" id="card"></div>
          </main>
+
+          <footer-component></footer-component>
     `;
   },
 
   async afterRender() {
     const dataRestaurant = await FavoriteData.getAllRestaurant();
-
+    const getLoading = document.querySelector('.loading');
+    getLoading.style.display = 'none';
     const favoriteContainer = document.querySelector('#card');
     dataRestaurant.forEach(restaurant => {
       console.log(createCatalogTemplate(restaurant));

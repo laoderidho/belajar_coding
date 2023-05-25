@@ -2,6 +2,7 @@ import CatalogData from '../../data/CatalogData';
 import Url from '../../routes/url-parser';
 import { createDetailTemplate } from '../template/TemplateCall';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import setMenusActive from '../../utils/menusActive';
 
 const Detail = {
   async render() {
@@ -20,7 +21,6 @@ const Detail = {
 
     // this header will be hidden
     document.querySelector('header').style.display = 'none';
-    document.querySelector('footer').style.display = 'none';
 
     // this button like
     LikeButtonInitiator.init({
@@ -34,6 +34,12 @@ const Detail = {
         pictureId: detail.pictureId,
       },
     });
+    setMenusActive({
+      menuLinks: document.querySelectorAll('.menuButton'),
+      menuList: document.querySelectorAll('.menus'),
+    });
+    // button click active show menus
+    // const menus = document.querySelectorAll('.menuButton');
   },
 };
 

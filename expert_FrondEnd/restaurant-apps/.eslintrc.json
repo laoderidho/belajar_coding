@@ -16,6 +16,12 @@
         "no-console": "off",
         "no-underscore-dangle": "off",
         "no-param-reassign": "off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "no-restricted-globals": "off",
+        "no-useless-constructor": "off",
+        "no-plusplus": "off",
+        "no-unused-vars": "off",
+        "no-loop-func": "off",
+        "no-use-before-define": "off"
     }
 }
