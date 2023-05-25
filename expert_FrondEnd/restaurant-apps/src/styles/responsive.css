@@ -43,6 +43,9 @@
     .card {
     grid-template-columns: repeat(2, 1fr);
   }
+  .nullDataFavorite{
+    font-size: 25px;
+  }
 }
 
 /* mobile display */
@@ -105,5 +108,8 @@
   }
   .detail_item {
       width: 100%;
+  }
+  .nullDataFavorite{
+    font-size: 19px;
   }
 }

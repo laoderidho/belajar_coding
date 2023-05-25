@@ -12,6 +12,7 @@ import handleScrool from './utils/ScrollAnimation';
 import './views/components/jumbotron';
 import './views/components/footer';
 import './views/components/loading';
+import './views/components/nullFavorite';
 
 // style import
 import '../styles/main.css';

@@ -6,6 +6,7 @@ const Favorite = {
     return `
          <main id="favorite" class="favorite">
             <h1 class="title">Favorite Page</h1>
+            <null-favorite></null-favorite>
             <loading-component></loading-component>
             <div class="card" id="card"></div>
          </main>
@@ -17,6 +18,13 @@ const Favorite = {
   async afterRender() {
     const dataRestaurant = await FavoriteData.getAllRestaurant();
     const getLoading = document.querySelector('.loading');
+
+    if (dataRestaurant.length !== 0) {
+      document.querySelector('null-favorite').style.display = 'none';
+    } else {
+      document.querySelector('null-favorite').style.display = 'block';
+    }
+
     getLoading.style.display = 'none';
     const favoriteContainer = document.querySelector('#card');
     dataRestaurant.forEach(restaurant => {
