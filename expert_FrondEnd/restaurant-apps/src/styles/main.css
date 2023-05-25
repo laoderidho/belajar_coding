@@ -110,35 +110,6 @@ header > nav {
   margin-top: 100px;
 }
 
-.contentHome{
-  height: 100vh;
-  color: white;
-}
-
-.contentHomeCover{
-   background-color: rgba(0, 0, 0, 0.6);
-   background-size: cover;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 100px;
-}
-
-.contentHome2{
-   margin-top:100vh ;
-   background-image: url(../public/images/heros/hero-image_1.jpg);
-}
-
-.contentHome3{
-   background-image: url(../public/images/heros/hero-image_3.jpg);
-}
-
-.contentHome4{
-    background-image: url(../public/images/heros/hero-image_4.jpg);
-}
-
 main > h1 {
   text-align: center;
   font-size: 30px;

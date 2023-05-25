@@ -10,7 +10,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "ignorePatterns": ["webpack.common.js", "webpack.dev.js", "webpack.prod.js"],
+    "ignorePatterns": ["webpack.common.js", "webpack.dev.js", "webpack.prod.js", "specs/", "e2e/", "codecept.conf.js", "node_modules/"],
     "rules": {
         "arrow-parens": ["error", "as-needed"],
         "no-console": "off",
@@ -22,6 +22,7 @@
         "no-plusplus": "off",
         "no-unused-vars": "off",
         "no-loop-func": "off",
-        "no-use-before-define": "off"
+        "no-use-before-define": "off",
+        "function-paren-newline": "off"
     }
 }

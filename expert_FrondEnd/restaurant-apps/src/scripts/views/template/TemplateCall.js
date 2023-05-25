@@ -1,8 +1,10 @@
 import ConfigDataApi from '../../global/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createCatalogTemplate = resto => `
          <section class="card-content">
-                    <img src="${ConfigDataApi.ImageLink + resto.pictureId}" alt="gambar dari ${resto.name}" crossorigin="anonymous">
+                    <img class="lazyload" src="${ConfigDataApi.ImageLink + resto.pictureId}" alt="gambar dari ${resto.name}" crossorigin="anonymous">
                     <p class="location"> <i class="fas fa-location-dot"></i> ${resto.city}</p>
                     <div class="card-item">
                         <h2 class="restoName" >${resto.name}</h2>
@@ -19,7 +21,7 @@ const createDetailTemplate = detail => `
                     <img src="${ConfigDataApi.ImageLink + detail.pictureId}" alt=" gambar dari ${detail.name}" crossorigin="anonymous">
                 </div>
                 <div class="detail_item">
-                    <h1>${detail.name}</h1>
+                    <h1 class="detail_title" >${detail.name}</h1>
                     <br>
                     <h2><i class="fas fa-location-dot"></i> ${detail.address} kota ${detail.city}</h2>
                     <br>

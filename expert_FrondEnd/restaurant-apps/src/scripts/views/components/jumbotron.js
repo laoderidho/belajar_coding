@@ -10,7 +10,7 @@ class Jumbotron extends HTMLElement {
 
         <style>    
         .jumbotron {
-            background-image: url(./images/heros/hero-image_2.jpg);
+            background-image: url('/images/hero-image_2-large.jpg');
 
             background-size: cover;
             background-position: center;
@@ -85,6 +85,9 @@ class Jumbotron extends HTMLElement {
                 }
                 .jumbotron-subtitle {
                     font-size: 18px;
+                }
+                .jumbotron{
+                    background-image: url('/images/hero-image_2-small.jpg');
                 }
             }
         </style>
