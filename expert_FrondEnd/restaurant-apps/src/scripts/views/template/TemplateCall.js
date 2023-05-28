@@ -4,7 +4,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createCatalogTemplate = resto => `
          <section class="card-content">
-                    <img class="lazyload" src="${ConfigDataApi.ImageLink + resto.pictureId}" alt="gambar dari ${resto.name}" crossorigin="anonymous">
+                    <img class="lazyload" data-src="${ConfigDataApi.ImageLink + resto.pictureId}" alt="gambar dari ${resto.name}" crossorigin="anonymous">
                     <p class="location"> <i class="fas fa-location-dot"></i> ${resto.city}</p>
                     <div class="card-item">
                         <h2 class="restoName" >${resto.name}</h2>
@@ -73,13 +73,13 @@ const createDetailTemplate = detail => `
         </div>`;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like like-white">
+  <button aria-label="like this restaurant" id="likeButton" class="like like-white">
      <i class="fas fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like like-red">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like like-blue">
     <i class="fas fa-heart" aria-hidden="true"></i>
   </button>
 `;

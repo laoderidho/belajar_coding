@@ -144,6 +144,7 @@ main > h1 {
   width: 100%;
   height: 170px;
   border-radius: 5px 5px 0 0;
+  object-fit: cover;
 }
 
 .card-item > h2 {
@@ -218,18 +219,17 @@ button{
 
 .detail_content {
     display: flex;
-    margin: 13px;
     justify-content: space-between;
 }
 .header-content {
     width:50%;
-    
+    margin: 12px;
 }
 .header-content > img {
     width: 100%;
     object-fit: cover;
     object-position: center;
-    height: 90vh;
+    height: 50vh;
     border-radius: 3px;
 }
 
@@ -279,22 +279,22 @@ button{
     color: white;
 }
 
-.food-red{
-    background-color: #ff0000;
-}
 
-.drink-blue{
+.drink-blue, .food-red{
     background-color: #19a7ce;
 }
 
 .link{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 47%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     margin: 12px 0px 12px 0px;
-    border-radius: 5px;
-    width: 100%;    
+    border-radius: 5px;   
     min-width: 44px;
     min-height: 44px;
     cursor: pointer;
@@ -352,25 +352,13 @@ button{
     background-color: #0d8db8;
 }
 
-.link-red{
-    background-color: #ff0000;
-    margin-bottom: 100px;
-}
-
-.link-red:hover{
-    background-color: #e60000;
-}
-
-
-
-
 .like {
   width: 55px;
   height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #19a7ce;
+  background-color: red;
   
   position: fixed;
   bottom: 16px;
@@ -386,16 +374,16 @@ button{
   color: white;
 }
 
-.like-red{
-  color: red;
+.like-blue{
+  color: #19a7ce;
 }
 
 
 #back{
   position: absolute;
-  top: 0;
+  top: 12px;
   right: 16px;
-  border-radius: 50%;
+  border-radius: 30%;
   border: 0;
   font-size: 18px;
   cursor: pointer;
