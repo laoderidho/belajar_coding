@@ -1,4 +1,4 @@
-const init = require('./server')
+const initServer = require('./src/server');
 
 // running server
-init()
+initServer.initServer();
